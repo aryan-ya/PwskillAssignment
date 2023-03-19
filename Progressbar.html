@@ -1,0 +1,47 @@
+
+ 
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <style>.progress-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    z-index: 9999;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #4CAF50;
+    width: 0%;
+  }
+  </style>  
+  <body>
+    <div class="progress-bar-container">
+        <div class="progress-bar" id="my-progress-bar"></div>
+      </div>
+      <script>
+        const progressBar = document.getElementById('my-progress-bar');
+    
+    window.addEventListener('scroll', () => {
+      const scrollTop = document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight;
+      const clientHeight = document.documentElement.clientHeight;
+    
+      const percentScrolled = (scrollTop / (scrollHeight - clientHeight)) * 100;
+    
+      progressBar.style.width = `${percentScrolled}%`;
+    });
+    
+      </script>
+    
+  </body>
+  </html>
