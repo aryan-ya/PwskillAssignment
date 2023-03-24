@@ -17,9 +17,9 @@ const customer = {
     }
   };
   
-  console.log(customer.balance); // Output: 1000
+  console.log(customer.balance);
   
-  deposit.call(customer, 500); // Output: Deposited 500. New balance is 1500.
+  deposit.call(customer, 500); 
   console.log(customer.balance); // Output: 1500
   
   withdrawal.call(customer, 200); // Output: Withdrew 200. New balance is 1300.
