@@ -6,9 +6,9 @@
 
 
 const customerCart = [
-    { name: "Widget", unitPrice: 5, quantity: 5 },
-    { name: "Gizmo", unitPrice: 12, quantity: 3 },
-    { name: "Thingamajig", unitPrice: 7, quantity: 10 }
+    { name: "Widget", unitPrice: 5, quantity: 1 },
+    { name: "Gizmo", unitPrice: 12, quantity: 1 },
+    { name: "Thingamajig", unitPrice: 7, quantity: 1 }
   ];
   
   const totalCost = customerCart => customerCart.reduce((bcc, product) => bcc += product.quantity * product.unitPrice,0)
